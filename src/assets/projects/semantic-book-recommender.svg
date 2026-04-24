@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22c55e" stop-opacity="0.28"/>
+      <stop offset="0.55" stop-color="#22d3ee" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#a855f7" stop-opacity="0.22"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" rx="30" fill="#0b0b10"/>
+  <rect x="35" y="35" width="1130" height="605" rx="25" fill="url(#g)" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" fill="rgba(255,255,255,0.92)">
+    <text x="100" y="220" font-size="56" font-weight="700">Semantic Book Recommender</text>
+    <text x="100" y="285" font-size="22" fill="rgba(255,255,255,0.65)">Vector embeddings + semantic search</text>
+  </g>
+  <g opacity="0.9">
+    <rect x="100" y="340" width="460" height="14" rx="7" fill="rgba(255,255,255,0.18)"/>
+    <rect x="100" y="370" width="520" height="14" rx="7" fill="rgba(255,255,255,0.13)"/>
+    <rect x="100" y="400" width="420" height="14" rx="7" fill="rgba(255,255,255,0.1)"/>
+  </g>
+  <g>
+    <rect x="100" y="460" width="230" height="48" rx="16" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.14)"/>
+    <text x="132" y="493" font-size="18" fill="rgba(255,255,255,0.85)" font-weight="600">NLP</text>
+  </g>
+  <g>
+    <rect x="350" y="460" width="230" height="48" rx="16" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.14)"/>
+    <text x="382" y="493" font-size="18" fill="rgba(255,255,255,0.85)" font-weight="600">ML</text>
+  </g>
+</svg>
+
