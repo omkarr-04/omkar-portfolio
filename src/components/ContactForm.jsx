@@ -45,14 +45,14 @@ export default function ContactForm() {
       transition={{ duration: 0.5 }}
       className="grid grid-cols-1 gap-4"
     >
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
         <label className="block">
           <span className="text-zinc-300 text-sm">Your name</span>
           <input
             name="name"
             type="text"
             required
-            className="mt-2 w-full rounded-2xl bg-white/5 border border-white/10 px-4 py-3 text-zinc-100 placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-fuchsia-300/40"
+            className="mt-1.5 sm:mt-2 w-full rounded-2xl bg-white/5 border border-white/10 px-3 sm:px-4 py-2.5 sm:py-3 text-zinc-100 placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-fuchsia-300/40 text-sm sm:text-base"
             placeholder="Omkar"
           />
         </label>
@@ -63,7 +63,7 @@ export default function ContactForm() {
             name="email"
             type="email"
             required
-            className="mt-2 w-full rounded-2xl bg-white/5 border border-white/10 px-4 py-3 text-zinc-100 placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-fuchsia-300/40"
+            className="mt-1.5 sm:mt-2 w-full rounded-2xl bg-white/5 border border-white/10 px-3 sm:px-4 py-2.5 sm:py-3 text-zinc-100 placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-fuchsia-300/40 text-sm sm:text-base"
             placeholder="you@example.com"
           />
         </label>
@@ -75,7 +75,7 @@ export default function ContactForm() {
           name="subject"
           type="text"
           required
-          className="mt-2 w-full rounded-2xl bg-white/5 border border-white/10 px-4 py-3 text-zinc-100 placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-fuchsia-300/40"
+          className="mt-1.5 sm:mt-2 w-full rounded-2xl bg-white/5 border border-white/10 px-3 sm:px-4 py-2.5 sm:py-3 text-zinc-100 placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-fuchsia-300/40 text-sm sm:text-base"
           placeholder="Let's talk about a project"
         />
       </label>
@@ -85,8 +85,8 @@ export default function ContactForm() {
         <textarea
           name="message"
           required
-          rows={5}
-          className="mt-2 w-full rounded-2xl bg-white/5 border border-white/10 px-4 py-3 text-zinc-100 placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-fuchsia-300/40"
+          rows={4}
+          className="mt-1.5 sm:mt-2 w-full rounded-2xl bg-white/5 border border-white/10 px-3 sm:px-4 py-2.5 sm:py-3 text-zinc-100 placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-fuchsia-300/40 text-sm sm:text-base"
           placeholder="Write your message…"
         />
       </label>
@@ -95,7 +95,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={status === 'sending'}
-          className="rounded-2xl px-5 py-3 bg-gradient-to-r from-fuchsia-500/30 to-cyan-400/30 border border-white/10 hover:from-fuchsia-500/40 hover:to-cyan-400/40 transition-colors text-zinc-100 disabled:opacity-60"
+          className="rounded-2xl px-5 py-2.5 sm:py-3 bg-gradient-to-r from-fuchsia-500/30 to-cyan-400/30 border border-white/10 hover:from-fuchsia-500/40 hover:to-cyan-400/40 transition-colors text-zinc-100 disabled:opacity-60 text-sm sm:text-base"
         >
           {status === 'sending' ? 'Sending…' : 'Send message'}
         </button>

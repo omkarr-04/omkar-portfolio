@@ -35,5 +35,25 @@
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-400 via-cyan-300 to-indigo-400;
   }
+
+  /* Enhanced glow effects for project cards */
+  .glow-fuchsia {
+    box-shadow: 0 0 40px rgba(217, 70, 239, 0.15);
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 40px rgba(34, 211, 238, 0.15);
+  }
+
+  /* Smooth transitions */
+  .transition-smooth {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Card hover glow */
+  .card-glow:hover {
+    box-shadow: 0 20px 40px -20px rgba(139, 92, 246, 0.3),
+                0 0 0 1px rgba(139, 92, 246, 0.2);
+  }
 }
 
