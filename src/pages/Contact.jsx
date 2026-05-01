@@ -14,13 +14,13 @@ const contactCards = [
   {
     title: 'LinkedIn',
     value: 'Omkar Sonawane',
-    href: 'https://www.linkedin.com/in/omkarsonawane04',
+    href: 'https://www.linkedin.com/in/omkarr04',
     icon: FaLinkedin,
   },
   {
     title: 'GitHub',
-    value: '@omkar2914',
-    href: 'https://github.com/omkar2914',
+    value: '@omkarr-04',
+    href: 'https://github.com/omkarr-04',
     icon: FaGithub,
   },
 ]

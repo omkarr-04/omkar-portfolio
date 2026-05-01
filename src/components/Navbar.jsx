@@ -109,7 +109,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-2">
             <a
               className="glass-card rounded-xl p-2 hover:shadow-[0_0_0_1px_rgba(192,132,252,0.25)] transition-shadow"
-              href="https://github.com/omkar2914"
+              href="https://github.com/omkarr-04"
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"
@@ -118,7 +118,7 @@ export default function Navbar() {
             </a>
             <a
               className="glass-card rounded-xl p-2 hover:shadow-[0_0_0_1px_rgba(192,132,252,0.25)] transition-shadow"
-              href="https://www.linkedin.com/in/omkarsonawane04"
+              href="https://www.linkedin.com/in/omkarr04"
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
@@ -181,7 +181,7 @@ export default function Navbar() {
               <div className="mt-4 pt-3 border-t border-white/10 grid grid-cols-3 gap-2">
                 <a
                   className="glass-card rounded-xl p-3 text-center hover:shadow-[0_0_0_1px_rgba(192,132,252,0.25)] transition-shadow flex items-center justify-center"
-                  href="https://github.com/omkar2914"
+                  href="https://github.com/omkarr-04"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="GitHub"
@@ -190,7 +190,7 @@ export default function Navbar() {
                 </a>
                 <a
                   className="glass-card rounded-xl p-3 text-center hover:shadow-[0_0_0_1px_rgba(192,132,252,0.25)] transition-shadow flex items-center justify-center"
-                  href="https://www.linkedin.com/in/omkarsonawane04"
+                  href="https://www.linkedin.com/in/omkarr04"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="LinkedIn"

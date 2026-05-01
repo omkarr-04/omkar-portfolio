@@ -28,7 +28,7 @@ export default function Projects() {
       {/* View More CTA */}
       <Reveal className="mt-10 sm:mt-16 text-center">
         <a
-          href="https://github.com/omkar2914"
+          href="https://github.com/omkarr-04?tab=repositories"
           target="_blank"
           rel="noreferrer"
           className="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-zinc-300 hover:text-white transition-all duration-300 text-sm sm:text-base"

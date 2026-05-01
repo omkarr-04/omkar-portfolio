@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4">
             <a
               className="glass-card rounded-lg sm:rounded-xl p-2 sm:p-2.5 hover:shadow-[0_0_0_1px_rgba(192,132,252,0.25)] transition-shadow"
-              href="https://github.com/omkar2914"
+              href="https://github.com/omkarr-04"
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"
@@ -19,7 +19,7 @@ export default function Footer() {
             </a>
             <a
               className="glass-card rounded-lg sm:rounded-xl p-2 sm:p-2.5 hover:shadow-[0_0_0_1px_rgba(192,132,252,0.25)] transition-shadow"
-              href="https://www.linkedin.com/in/omkarsonawane04"
+              href="https://www.linkedin.com/in/omkarr04"
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"

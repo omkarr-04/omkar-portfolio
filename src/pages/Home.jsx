@@ -118,7 +118,7 @@ export default function Home() {
 
                 <div className="mt-5 sm:mt-7 flex items-center gap-2 sm:gap-3">
                   <a
-                    href="https://github.com/omkar2914"
+                    href="https://github.com/omkarr-04"
                     target="_blank"
                     rel="noreferrer"
                     className="glass-card rounded-xl sm:rounded-2xl p-2.5 sm:p-3 hover:shadow-[0_0_0_1px_rgba(192,132,252,0.25)] transition-shadow"
@@ -127,7 +127,7 @@ export default function Home() {
                     <FaGithub className="text-zinc-100 text-lg sm:text-xl" />
                   </a>
                   <a
-                    href="https://www.linkedin.com/in/omkarsonawane04"
+                    href="https://www.linkedin.com/in/omkarr04"
                     target="_blank"
                     rel="noreferrer"
                     className="glass-card rounded-xl sm:rounded-2xl p-2.5 sm:p-3 hover:shadow-[0_0_0_1px_rgba(192,132,252,0.25)] transition-shadow"
