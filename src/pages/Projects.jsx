@@ -5,7 +5,7 @@ import { projects } from '../projects/projects.js'
 
 export default function Projects() {
   return (
-    <div className="mx-auto max-w-7xl px-3 sm:px-4 py-12 sm:py-16 lg:py-24">
+    <div className="mx-auto max-w-7xl px-3 sm:px-4 py-16 sm:py-20 lg:py-24">
       <SectionHeading
         eyebrow="Portfolio"
         title="Featured Builds"
@@ -13,12 +13,9 @@ export default function Projects() {
       />
 
       <Reveal>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 mt-8 sm:mt-12">
-          {projects.map((project, index) => (
-            <div 
-              key={project.id} 
-              className={index === 0 ? 'md:col-span-2' : ''}
-            >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8 mt-8 sm:mt-12">
+          {projects.map((project) => (
+            <div key={project.id} className="h-full">
               <ProjectCard project={project} />
             </div>
           ))}

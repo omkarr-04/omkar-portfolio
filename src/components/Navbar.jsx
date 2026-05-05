@@ -6,7 +6,7 @@ import { FiMenu, FiX } from 'react-icons/fi'
 const navItems = [
   { label: 'Home', id: 'home' },
   { label: 'About', id: 'about' },
-  { label: 'Skills', id: 'skills' },
+  // { label: 'Skills', id: 'skills' },
   { label: 'Projects', id: 'projects' },
   { label: 'Resume', id: 'resume' },
   { label: 'Contact', id: 'contact' },
@@ -127,7 +127,7 @@ export default function Navbar() {
             </a>
             <a
               className="glass-card rounded-xl p-2 hover:shadow-[0_0_0_1px_rgba(192,132,252,0.25)] transition-shadow"
-              href="mailto:omkarsonawane2914@outlook.com"
+              href="mailto:omkarsonawane2914@gmail.com"
               aria-label="Email"
             >
               <FaEnvelope className="text-zinc-100 text-sm" />
@@ -199,7 +199,7 @@ export default function Navbar() {
                 </a>
                 <a
                   className="glass-card rounded-xl p-3 text-center hover:shadow-[0_0_0_1px_rgba(192,132,252,0.25)] transition-shadow flex items-center justify-center"
-                  href="mailto:omkarsonawane2914@outlook.com"
+                  href="mailto:omkarsonawane2914@gmail.com"
                   aria-label="Email"
                 >
                   <FaEnvelope className="text-zinc-100 text-lg" />

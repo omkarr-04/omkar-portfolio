@@ -30,7 +30,7 @@ export default function Resume() {
               <p className="text-zinc-400 text-sm">Resume PDF</p>
             </div>
             <a
-              href="/resume.pdf"
+              href="/Omkar-Sonawane-Resume.pdf"
               download
               className="rounded-2xl px-5 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-fuchsia-500/30 to-cyan-400/30 hover:from-fuchsia-500/40 hover:to-cyan-400/40 border border-white/10 text-zinc-100 transition-colors text-sm sm:text-base"
             >
@@ -55,11 +55,11 @@ export default function Resume() {
           <ListCard
             title="Technical Skills"
             items={[
-              'Python (EDA, ML basics, data workflows)',
-              'SQL (joins, aggregation, query optimization)',
               'MongoDB, Express.js, React.js, Node.js',
               'JavaScript, HTML, CSS',
               'Git & GitHub (collaboration workflows)',
+              'Python (ML basics, data workflows)',
+              'SQL (joins, aggregation, query optimization)',
             ]}
           />
         </Reveal>

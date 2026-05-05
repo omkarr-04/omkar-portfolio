@@ -1,5 +1,6 @@
 import buildBazaarImg from '../assets/projects/build-bazaar.svg'
 import inventoryImg from '../assets/projects/inventory-app.svg'
+import aiHcpCrmImg from '../assets/projects/ai-hcp-crm.svg'
 
 export const projects = [
   {
@@ -18,7 +19,7 @@ export const projects = [
       'Redux Toolkit',
       'Tailwind CSS',
     ],
-    githubUrl: 'https://github.com/omkarr-04/Build-Bazaar-Portfolio',
+    githubUrl: 'https://github.com/omkarr-04/Build-Bazaar',
     liveUrl: null,
     screenshot: buildBazaarImg,
     featured: true,
@@ -41,6 +42,27 @@ export const projects = [
     githubUrl: 'https://github.com/omkarr-04/Inventory-Management',
     liveUrl: null,
     screenshot: inventoryImg,
+    featured: true,
+  },
+  {
+    id: 3,
+    title: 'AI-HCP CRM',
+    tagline: 'AI CRM for Medical Sales Teams',
+    description:
+      'A full-stack CRM for medical sales reps to log interactions with healthcare professionals using structured forms and an AI chat interface. Features conversational logging, history tracking, and LLM-powered summaries.',
+    fullDescription:
+      'Built a CRM experience for healthcare sales teams with AI-driven interaction logging, follow-up suggestions, and a comprehensive dashboard for relationship tracking.',
+    technologies: [
+      'React',
+      'Redux Toolkit',
+      'Tailwind CSS',
+      'FastAPI',
+      'PostgreSQL',
+      'LangGraph',
+    ],
+    githubUrl: 'https://github.com/omkarr-04/ai-hcp-crm',
+    liveUrl: null,
+    screenshot: aiHcpCrmImg,
     featured: true,
   },
 ]

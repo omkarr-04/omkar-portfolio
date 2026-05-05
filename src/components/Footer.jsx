@@ -28,7 +28,7 @@ export default function Footer() {
             </a>
             <a
               className="glass-card rounded-lg sm:rounded-xl p-2 sm:p-2.5 hover:shadow-[0_0_0_1px_rgba(192,132,252,0.25)] transition-shadow"
-              href="mailto:omkarsonawane2914@outlook.com"
+              href="mailto:omkarsonawane2914@gmail.com"
               aria-label="Email"
             >
               <FaEnvelope className="text-base sm:text-lg" />

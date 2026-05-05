@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 const MotionForm = motion.form
 
 export default function ContactForm() {
-  const contactEmail = 'omkarsonawane2914@outlook.com'
+  const contactEmail = 'omkarsonawane2914@gmail.com'
   const [status, setStatus] = useState('idle')
   const [message, setMessage] = useState('')
 
@@ -53,7 +53,7 @@ export default function ContactForm() {
             type="text"
             required
             className="mt-1.5 sm:mt-2 w-full rounded-2xl bg-white/5 border border-white/10 px-3 sm:px-4 py-2.5 sm:py-3 text-zinc-100 placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-fuchsia-300/40 text-sm sm:text-base"
-            placeholder="Omkar"
+            placeholder="Your name"
           />
         </label>
 

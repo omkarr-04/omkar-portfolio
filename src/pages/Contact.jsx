@@ -7,8 +7,8 @@ import ContactForm from '../components/ContactForm.jsx'
 const contactCards = [
   {
     title: 'Email',
-    value: 'omkarsonawane2914@outlook.com',
-    href: 'mailto:omkarsonawane2914@outlook.com',
+    value: 'omkarsonawane2914@gmail.com',
+    href: 'mailto:omkarsonawane2914@gmail.com',
     icon: FaEnvelope,
   },
   {

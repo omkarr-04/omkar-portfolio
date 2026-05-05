@@ -9,7 +9,7 @@ export default function SectionHeading({ eyebrow, title, subtitle }) {
           </p>
         </div>
       ) : null}
-      <h2 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-bold text-zinc-100 tracking-tight">
+      <h2 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight bg-gradient-to-r from-fuchsia-400 via-cyan-300 to-indigo-400 bg-clip-text text-transparent">
         {title}
         <span className="text-gradient">.</span>
       </h2>
