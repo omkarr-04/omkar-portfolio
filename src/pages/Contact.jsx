@@ -78,7 +78,7 @@ export default function Contact() {
                 Contact Form
               </h3>
               <p className="text-zinc-400 text-sm mt-2 leading-relaxed">
-                No third-party setup needed. Submitting opens your email app with a drafted message.
+                Feel free to connect with me for collaborations, projects, or opportunities.
               </p>
 
               <div className="mt-4 sm:mt-5">
