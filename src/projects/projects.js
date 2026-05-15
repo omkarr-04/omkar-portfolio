@@ -1,6 +1,8 @@
 import buildBazaarImg from '../assets/projects/build-bazaar.svg'
 import inventoryImg from '../assets/projects/inventory-app.svg'
 import aiHcpCrmImg from '../assets/projects/ai-hcp-crm.svg'
+import neuraFlowAiImg from '../assets/projects/neura-flow-ai.svg'
+import cloudCartAiImg from '../assets/projects/cloudcart-ai.svg'
 
 export const projects = [
   {
@@ -63,6 +65,51 @@ export const projects = [
     githubUrl: 'https://github.com/omkarr-04/ai-hcp-crm',
     liveUrl: null,
     screenshot: aiHcpCrmImg,
+    featured: true,
+  },
+  {
+    id: 4,
+    title: 'Neura Flow AI',
+    tagline: 'AI Workflow Automation Platform',
+    description:
+      'An AI-powered workflow automation platform that streamlines business processes using intelligent agents, real-time orchestration, and modern full-stack architecture.',
+    fullDescription:
+      'Includes AI task automation, workflow pipelines, analytics dashboards, and scalable backend services for business process orchestration.',
+    technologies: [
+      'React.js',
+      'Next.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'Node.js',
+      'PostgreSQL',
+      'OpenAI API',
+      'LangChain',
+    ],
+    githubUrl: 'https://github.com/omkarr-04/neura-flow-ai',
+    liveUrl: 'https://neura-flow-ai.onrender.com/',
+    screenshot: neuraFlowAiImg,
+    featured: true,
+  },
+  {
+    id: 5,
+    title: 'CloudCart AI',
+    tagline: 'Cloud-Native AI E-Commerce Platform',
+    description:
+      'A cloud-native AI e-commerce platform focused on smart product recommendations, inventory optimization, and scalable online shopping experiences.',
+    fullDescription:
+      'Features AI-driven insights, modern UI/UX, secure authentication, and responsive dashboards for smarter retail operations.',
+    technologies: [
+      'React.js',
+      'Firebase',
+      'Tailwind CSS',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'AI APIs',
+    ],
+    githubUrl: 'https://github.com/omkarr-04/cloudcart-ai',
+    liveUrl: null,
+    screenshot: cloudCartAiImg,
     featured: true,
   },
 ]
