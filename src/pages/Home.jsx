@@ -125,7 +125,7 @@ export default function Home() {
                     className="glass-panel rounded-2xl p-3 sm:p-4 border border-white/10 group hover:border-white/20 transition-all duration-300"
                   >
                     <p className="text-[10px] sm:text-xs uppercase tracking-[0.12em] text-zinc-500 font-semibold mb-1">Featured</p>
-                    <p className="text-zinc-100 font-semibold text-xs sm:text-sm">3 Projects</p>
+                    <p className="text-zinc-100 font-semibold text-xs sm:text-sm">5 Projects</p>
                   </MotionDiv>
                 </div>
               </div>
