@@ -38,27 +38,6 @@ Notes:
 
 ## Deployment
 
-### Netlify
-
-1. In Netlify, create a new site from GitHub.
-2. Build settings:
-   - Build command: `npm run build`
-   - Publish directory: `dist`
-3. SPA routing:
-   - The repo includes `public/_redirects` with a catch-all rule:
-     - `/* /index.html 200`
-   - This ensures client-side routes like `/projects` and `/blog` work on refresh.
-
-### Vercel
-
-1. Create a Vercel project from the repo.
-2. Build settings:
-   - Framework preset should detect Vite automatically.
-   - Build command: `npm run build`
-   - Output: `dist`
-3. SPA routing:
-   - The repo includes `vercel.json` to rewrite all routes to `index.html`.
-
 ### Render
 
 1. In Render, create a new **Blueprint** and select this repository.
