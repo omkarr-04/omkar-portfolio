@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-/* Global dark theme + glassmorphism foundation */
 @layer base {
   html {
     scroll-behavior: smooth;
