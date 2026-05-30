@@ -1,7 +1,4 @@
 import { useState } from 'react'
-import { motion } from 'framer-motion'
-
-const MotionForm = motion.form
 
 export default function ContactForm() {
   const contactEmail = 'omkarsonawane2914@gmail.com'
@@ -10,7 +7,6 @@ export default function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-
     setStatus('sending')
     setMessage('')
 
@@ -23,7 +19,7 @@ export default function ContactForm() {
 
       const mailSubject = encodeURIComponent(subject || 'Portfolio Contact')
       const mailBody = encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\n\nMessage:\n${userMessage}`
+        `Name: ${name}\nEmail: ${email}\n\nMessage:\n${userMessage}`,
       )
 
       window.location.href = `mailto:${contactEmail}?subject=${mailSubject}&body=${mailBody}`
@@ -32,85 +28,51 @@ export default function ContactForm() {
       e.currentTarget.reset()
     } catch {
       setStatus('error')
-      setMessage('Could not open your email app. Use the email card to contact me directly.')
+      setMessage('Could not open your email app. Use the email link instead.')
     }
   }
 
   return (
-    <MotionForm
-      onSubmit={handleSubmit}
-      initial={{ opacity: 0, y: 12 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.15 }}
-      transition={{ duration: 0.5 }}
-      className="grid grid-cols-1 gap-4"
-    >
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+    <form onSubmit={handleSubmit} className="space-y-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <label className="block">
-          <span className="text-zinc-300 text-sm">Your name</span>
-          <input
-            name="name"
-            type="text"
-            required
-            className="mt-1.5 sm:mt-2 w-full rounded-2xl bg-white/5 border border-white/10 px-3 sm:px-4 py-2.5 sm:py-3 text-zinc-100 placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-fuchsia-300/40 text-sm sm:text-base"
-            placeholder="Your name"
-          />
+          <span className="text-label block mb-2">Name</span>
+          <input name="name" type="text" required className="input" placeholder="Your name" />
         </label>
-
         <label className="block">
-          <span className="text-zinc-300 text-sm">Email</span>
-          <input
-            name="email"
-            type="email"
-            required
-            className="mt-1.5 sm:mt-2 w-full rounded-2xl bg-white/5 border border-white/10 px-3 sm:px-4 py-2.5 sm:py-3 text-zinc-100 placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-fuchsia-300/40 text-sm sm:text-base"
-            placeholder="you@example.com"
-          />
+          <span className="text-label block mb-2">Email</span>
+          <input name="email" type="email" required className="input" placeholder="you@example.com" />
         </label>
       </div>
 
       <label className="block">
-        <span className="text-zinc-300 text-sm">Subject</span>
-        <input
-          name="subject"
-          type="text"
-          required
-          className="mt-1.5 sm:mt-2 w-full rounded-2xl bg-white/5 border border-white/10 px-3 sm:px-4 py-2.5 sm:py-3 text-zinc-100 placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-fuchsia-300/40 text-sm sm:text-base"
-          placeholder="Let's talk about a project"
-        />
+        <span className="text-label block mb-2">Subject</span>
+        <input name="subject" type="text" required className="input" placeholder="What's this about?" />
       </label>
 
       <label className="block">
-        <span className="text-zinc-300 text-sm">Message</span>
+        <span className="text-label block mb-2">Message</span>
         <textarea
           name="message"
           required
-          rows={4}
-          className="mt-1.5 sm:mt-2 w-full rounded-2xl bg-white/5 border border-white/10 px-3 sm:px-4 py-2.5 sm:py-3 text-zinc-100 placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-fuchsia-300/40 text-sm sm:text-base"
-          placeholder="Write your message…"
+          rows={5}
+          className="input textarea"
+          placeholder="Tell me about your project…"
         />
       </label>
 
-      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
-        <button
-          type="submit"
-          disabled={status === 'sending'}
-          className="rounded-2xl px-5 py-2.5 sm:py-3 bg-gradient-to-r from-fuchsia-500/30 to-cyan-400/30 border border-white/10 hover:from-fuchsia-500/40 hover:to-cyan-400/40 transition-colors text-zinc-100 disabled:opacity-60 text-sm sm:text-base"
-        >
-          {status === 'sending' ? 'Sending…' : 'Send message'}
+      <div className="flex flex-col sm:flex-row sm:items-center gap-4 pt-2">
+        <button type="submit" disabled={status === 'sending'} className="btn btn-primary">
+          {status === 'sending' ? 'Opening…' : 'Send message'}
         </button>
-
         {status === 'sent' ? (
-          <p className="text-sm text-emerald-300">{message}</p>
+          <p className="text-meta text-[var(--accent)] max-w-none">{message}</p>
         ) : status === 'error' ? (
-          <p className="text-sm text-rose-300">{message}</p>
+          <p className="text-meta text-[var(--text-secondary)] max-w-none">{message}</p>
         ) : (
-          <p className="text-sm text-zinc-500">
-            Tip: Fill the form and your email app will open with a prefilled draft.
-          </p>
+          <p className="text-meta max-w-none">Opens your email client with a draft.</p>
         )}
       </div>
-    </MotionForm>
+    </form>
   )
 }
-

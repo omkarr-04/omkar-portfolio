@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import { motion } from 'framer-motion'
 
 import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
@@ -12,18 +11,12 @@ import Projects from './pages/Projects.jsx'
 import Resume from './pages/Resume.jsx'
 import Contact from './pages/Contact.jsx'
 
-const MotionDiv = motion.div
-
 export default function App() {
   useEffect(() => {
-    // Handle initial hash navigation
     const hash = window.location.hash.slice(1)
     if (hash) {
       setTimeout(() => {
-        const element = document.getElementById(hash)
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' })
-        }
+        document.getElementById(hash)?.scrollIntoView({ behavior: 'smooth' })
       }, 100)
     }
   }, [])
@@ -34,23 +27,23 @@ export default function App() {
       <Loader />
 
       <main className="flex-1">
-        <section id="home">
+        <section id="home" className="section-hero">
           <Home />
         </section>
 
-        <section id="about">
+        <section id="about" className="section-tone-a">
           <About />
         </section>
 
-        <section id="projects">
+        <section id="projects" className="section-tone-b">
           <Projects />
         </section>
 
-        <section id="resume">
+        <section id="resume" className="section-tone-c">
           <Resume />
         </section>
 
-        <section id="contact">
+        <section id="contact" className="section-tone-warm">
           <Contact />
         </section>
       </main>

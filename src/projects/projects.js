@@ -1,13 +1,16 @@
-import buildBazaarImg from '../assets/projects/build-bazaar.svg'
-import inventoryImg from '../assets/projects/inventory-app.svg'
-import aiHcpCrmImg from '../assets/projects/ai-hcp-crm.svg'
-import neuraFlowAiImg from '../assets/projects/neura-flow-ai.svg'
-import cloudCartAiImg from '../assets/projects/cloudcart-ai.svg'
+import buildBazaarImg from '../assets/projects/buildbazaarhome.png'
+import inventoryImg from '../assets/projects/inventory-app.png'
+import aiHcpCrmImg from '../assets/projects/ai-hcp-crm.png'
+import neuraFlowAiImg from '../assets/projects/neura-flow-ai.png'
+import cloudCartAiImg from '../assets/projects/cloudcart-ai.png'
 
 export const projects = [
   {
     id: 1,
     title: 'Build Bazaar',
+    category: 'Full Stack',
+    year: '2025',
+    role: 'Solo developer',
     tagline: 'Full Stack E-Commerce Platform',
     description:
       'A sophisticated MERN stack marketplace for PC configuration featuring an AI chatbot powered by Groq API for personalized recommendations. Includes intelligent compatibility checker, real-time inventory management, and seamless checkout experience.',
@@ -29,6 +32,9 @@ export const projects = [
   {
     id: 2,
     title: 'Inventory Management System',
+    category: 'Mobile',
+    year: '2026',
+    role: 'Solo developer',
     tagline: 'Android App with Kotlin + Firebase',
     description:
       'A comprehensive inventory management Android application built with Kotlin and Firebase. Features real-time database sync, barcode scanning, automated stock alerts, and detailed analytics dashboard.',
@@ -49,6 +55,9 @@ export const projects = [
   {
     id: 3,
     title: 'AI-HCP CRM',
+    category: 'AI · CRM',
+    year: '2026',
+    role: 'Full-stack',
     tagline: 'AI CRM for Medical Sales Teams',
     description:
       'A full-stack CRM for medical sales reps to log interactions with healthcare professionals using structured forms and an AI chat interface. Features conversational logging, history tracking, and LLM-powered summaries.',
@@ -70,6 +79,9 @@ export const projects = [
   {
     id: 4,
     title: 'Neura Flow AI',
+    category: 'AI · Automation',
+    year: '2026',
+    role: 'Full-stack',
     tagline: 'AI Workflow Automation Platform',
     description:
       'An AI-powered workflow automation platform that streamlines business processes using intelligent agents, real-time orchestration, and modern full-stack architecture.',
@@ -93,6 +105,9 @@ export const projects = [
   {
     id: 5,
     title: 'CloudCart AI',
+    category: 'E-Commerce',
+    year: '2026',
+    role: 'Solo developer',
     tagline: 'Cloud-Native AI E-Commerce Platform',
     description:
       'A cloud-native AI e-commerce platform focused on smart product recommendations, inventory optimization, and scalable online shopping experiences.',

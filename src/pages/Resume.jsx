@@ -1,13 +1,14 @@
 import SectionHeading from '../components/SectionHeading.jsx'
-import Reveal from '../components/Reveal.jsx'
 
-function ListCard({ title, items }) {
+function ResumeBlock({ title, items }) {
   return (
-    <div className="glass-panel rounded-2xl sm:rounded-3xl p-5 sm:p-6 border border-white/10 h-full">
-      <h3 className="text-zinc-100 font-semibold text-base sm:text-lg">{title}</h3>
-      <ul className="mt-3 text-zinc-300 space-y-2 text-sm sm:text-base">
-        {items.map((it) => (
-          <li key={it}>{it}</li>
+    <div className="surface p-6 sm:p-7 h-full">
+      <h3 className="text-subheading mb-4">{title}</h3>
+      <ul className="space-y-2.5">
+        {items.map((item) => (
+          <li key={item} className="text-body max-w-none">
+            {item}
+          </li>
         ))}
       </ul>
     </div>
@@ -16,70 +17,68 @@ function ListCard({ title, items }) {
 
 export default function Resume() {
   return (
-    <div className="mx-auto max-w-6xl px-3 sm:px-4 py-8 sm:py-12">
+    <div className="container section relative-z">
       <SectionHeading
-        eyebrow="Resume"
-        title="Download & Overview"
-        subtitle="A quick snapshot of education, skills, tools, certifications, and projects."
+        label="Resume"
+        title="Skills & experience"
+        description="Education, technical expertise, and tools I work with."
       />
 
-      <Reveal>
-        <div className="glass-card rounded-2xl sm:rounded-3xl p-5 sm:p-6 border border-white/10 mb-5 sm:mb-6">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
-            <div>
-              <p className="text-zinc-400 text-sm">Resume PDF</p>
-            </div>
-            <a
-              href="/Omkar-Sonawane-Resume.pdf"
-              download
-              className="rounded-2xl px-5 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-fuchsia-500/30 to-cyan-400/30 hover:from-fuchsia-500/40 hover:to-cyan-400/40 border border-white/10 text-zinc-100 transition-colors text-sm sm:text-base"
-            >
-              Download Resume
-            </a>
-          </div>
+      <div className="surface p-6 sm:p-7 mb-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <p className="text-body max-w-md">Download the full PDF for complete details.</p>
+        <a href="/Omkar-Sonawane-Resume.pdf" download className="btn btn-primary shrink-0">
+          Download PDF
+        </a>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <ResumeBlock
+          title="Education"
+          items={[
+            'BSc IT, University of Mumbai (Final Year)',
+            'Full-stack development focus',
+            'Cloud-ready systems & architecture',
+          ]}
+        />
+        <ResumeBlock
+          title="Languages & frameworks"
+          items={[
+            'JavaScript (ES6+), React.js, Node.js',
+            'Express.js, MongoDB, Firebase',
+            'Python, SQL, Tailwind CSS',
+            'Kotlin (Android Development)',
+          ]}
+        />
+        <ResumeBlock
+          title="Tools & platforms"
+          items={[
+            'Git & GitHub (version control)',
+            'VS Code, Postman, Firebase Console',
+            'Android Studio, MongoDB Atlas',
+            'Vite, npm, REST APIs',
+          ]}
+        />
+      </div>
+
+      <div className="mt-10 surface p-6 sm:p-7">
+        <h3 className="text-subheading mb-6">Key competencies</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-3">
+          {[
+            'Full-stack web development',
+            'Responsive UI/UX design',
+            'Database design & optimization',
+            'RESTful API development',
+            'Performance optimization',
+            'Clean code practices',
+            'Git & collaboration',
+            'Agile problem solving',
+          ].map((item) => (
+            <p key={item} className="text-body max-w-none">
+              {item}
+            </p>
+          ))}
         </div>
-      </Reveal>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-        <Reveal className="md:col-span-1 lg:col-span-1">
-          <ListCard
-            title="Education"
-            items={[
-              'BSc IT, University of Mumbai (Final Year)',
-              'Relevant interests: Full Stack Development',
-            ]}
-          />
-        </Reveal>
-
-        <Reveal className="md:col-span-1 lg:col-span-1">
-          <ListCard
-            title="Technical Skills"
-            items={[
-              'MongoDB, Express.js, React.js, Node.js',
-              'JavaScript, HTML, CSS',
-              'Git & GitHub (collaboration workflows)',
-              'Python (ML basics, data workflows)',
-              'SQL (joins, aggregation, query optimization)',
-            ]}
-          />
-        </Reveal>
-
-        <Reveal className="md:col-span-2 lg:col-span-1">
-          <ListCard
-            title="Tools"
-            items={[
-              'VS Code + GitHub',
-              'Postman (API testing)',
-            ]}
-          />
-        </Reveal>
-
-        <Reveal className="md:col-span-2 lg:col-span-2">
-          <div className="glass-panel rounded-2xl sm:rounded-3xl p-5 sm:p-6 border border-white/10 h-full">
-          </div>
-        </Reveal>
       </div>
     </div>
   )
 }
-

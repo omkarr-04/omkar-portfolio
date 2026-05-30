@@ -1,94 +1,53 @@
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
-
 import SectionHeading from '../components/SectionHeading.jsx'
-import Reveal from '../components/Reveal.jsx'
 import ContactForm from '../components/ContactForm.jsx'
 
-const contactCards = [
-  {
-    title: 'Email',
-    value: 'omkarsonawane2914@gmail.com',
-    href: 'mailto:omkarsonawane2914@gmail.com',
-    icon: FaEnvelope,
-  },
-  {
-    title: 'LinkedIn',
-    value: 'Omkar Sonawane',
-    href: 'https://www.linkedin.com/in/omkarr04',
-    icon: FaLinkedin,
-  },
-  {
-    title: 'GitHub',
-    value: '@omkarr-04',
-    href: 'https://github.com/omkarr-04',
-    icon: FaGithub,
-  },
+const links = [
+  { label: 'Email', value: 'omkarsonawane2914@gmail.com', href: 'mailto:omkarsonawane2914@gmail.com' },
+  { label: 'LinkedIn', value: 'Omkar Sonawane', href: 'https://www.linkedin.com/in/omkarr04', external: true },
+  { label: 'GitHub', value: '@omkarr-04', href: 'https://github.com/omkarr-04', external: true },
 ]
 
 export default function Contact() {
   return (
-    <div className="mx-auto max-w-6xl px-3 sm:px-4 py-8 sm:py-12">
+    <div className="container section relative-z">
       <SectionHeading
-        eyebrow="Contact"
-        title="Let’s build something impactful"
-        subtitle="Send a message and I’ll get back to you. For faster replies, use your real email address."
+        label="Contact"
+        title="Get in touch"
+        description="Interested in working together or just want to chat? I'd love to hear from you."
       />
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-5 items-start">
-        <div className="lg:col-span-1">
-          <Reveal>
-            <div className="glass-panel rounded-2xl sm:rounded-3xl p-5 sm:p-6 border border-white/10">
-              <h3 className="text-zinc-100 font-semibold text-base sm:text-lg">
-                Location
-              </h3>
-              <p className="text-zinc-300 mt-3 leading-relaxed text-sm sm:text-base">
-                Mumbai, India
-              </p>
-            </div>
-          </Reveal>
-
-          <div className="mt-4 space-y-3 sm:space-y-4">
-            {contactCards.map((c) => (
-              <Reveal key={c.title} delay={0.05}>
-                <a
-                  href={c.href}
-                  target={c.title === 'Email' ? undefined : '_blank'}
-                  rel={c.title === 'Email' ? undefined : 'noreferrer'}
-                  className="glass-panel rounded-2xl sm:rounded-3xl p-5 sm:p-6 border border-white/10 block hover:shadow-[0_0_0_1px_rgba(192,132,252,0.18)] transition-shadow"
-                >
-                  <div className="flex items-center justify-between gap-3 sm:gap-4">
-                    <div className="min-w-0 flex-1">
-                      <p className="text-zinc-400 text-sm">{c.title}</p>
-                      <p className="text-zinc-100 font-semibold mt-1 text-sm sm:text-base truncate">
-                        {c.value}
-                      </p>
-                    </div>
-                    <c.icon className="text-zinc-100 text-xl sm:text-2xl flex-shrink-0" />
-                  </div>
-                </a>
-              </Reveal>
-            ))}
+      <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-14">
+        <div className="lg:col-span-2 space-y-8">
+          <div>
+            <p className="text-label mb-2">Location</p>
+            <p className="text-body text-[var(--text-secondary)] max-w-none">Mumbai, India</p>
           </div>
+
+          <ul className="space-y-6">
+            {links.map((link) => (
+              <li key={link.label}>
+                <p className="text-label mb-1">{link.label}</p>
+                <a
+                  href={link.href}
+                  target={link.external ? '_blank' : undefined}
+                  rel={link.external ? 'noreferrer' : undefined}
+                  className="link text-[var(--text-secondary)] text-[0.9375rem] break-all"
+                >
+                  {link.value}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
 
-        <div className="lg:col-span-2">
-          <Reveal>
-            <div className="glass-panel rounded-2xl sm:rounded-3xl p-5 sm:p-6 border border-white/10">
-              <h3 className="text-zinc-100 font-semibold text-base sm:text-lg">
-                Contact Form
-              </h3>
-              <p className="text-zinc-400 text-sm mt-2 leading-relaxed">
-                Feel free to connect with me for collaborations, projects, or opportunities.
-              </p>
-
-              <div className="mt-4 sm:mt-5">
-                <ContactForm />
-              </div>
-            </div>
-          </Reveal>
+        <div className="lg:col-span-3 surface p-6 sm:p-8">
+          <h3 className="text-subheading mb-2">Send a message</h3>
+          <p className="text-body mb-8 max-w-md">
+            Fill out the form below and I&apos;ll get back to you as soon as I can.
+          </p>
+          <ContactForm />
         </div>
       </div>
     </div>
   )
 }
-
